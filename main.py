@@ -4,6 +4,7 @@ from threading import Thread
 
 def download(url, path, is_only_audio):
     global have_error, is_download_complete, video_title
+    have_error = False
 
     try:
         yt = YouTube(url)
@@ -12,8 +13,9 @@ def download(url, path, is_only_audio):
         video_title = yt.title
 
         yt.streams.filter(resolution=resolution, only_audio=is_only_audio).first().download(path)
-    except Exception:
+    except Exception as e:
         have_error = True
+        print(e)
     finally:
         is_download_complete = True
 
