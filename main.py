@@ -1,18 +1,20 @@
-import PySimpleGUI as sg
-from pytube import YouTube
+from pytubefix import YouTube
+from pytubefix.cli import on_progress
 from threading import Thread
+import PySimpleGUI as sg
 
 def download(url, path, is_only_audio):
     global have_error, is_download_complete, video_title
     have_error = False
 
     try:
-        yt = YouTube(url)
-
-        resolution = yt.streams.get_highest_resolution()
+        yt = YouTube(url, on_progress_callback=on_progress)
         video_title = yt.title
 
-        yt.streams.filter(resolution=resolution, only_audio=is_only_audio).first().download(path)
+        if is_only_audio:
+            yt.streams.get_audio_only().download(output_path=path)
+        else:
+            yt.streams.get_highest_resolution().download(output_path=path)
     except Exception as e:
         have_error = True
         print(e)
