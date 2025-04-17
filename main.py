@@ -35,7 +35,11 @@ layout = [
     [sg.Text('Youtube video downloader')],
     [sg.Text('Video URL:'), sg.InputText(key='url')],
     [sg.Text('Path:'), sg.InputText(key='path'), sg.FolderBrowse()],
-    [sg.Text('Format:'), sg.Radio(text='video', group_id='format', key='format_0', default=True), sg.Radio(text='audio', group_id='format', key='format_1')],
+    [
+        sg.Text('Format:'),
+        sg.Radio(text='video', group_id='format', key='format_0', default=True),
+        sg.Radio(text='audio', group_id='format', key='format_1')
+    ],
     [sg.Text('Download your favorite Youtube video <3', key='status')],
     [sg.Button('Download'), sg.Button('Exit')]
 ]
