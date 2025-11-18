@@ -19,7 +19,7 @@ class DownloadThread(QThread):
     def run(self):
         try:
             ydl_opts = {
-                'format': 'm4a/bestaudio/best',
+                'format': 'bestaudio/best',
                 'outtmpl': f'{self.path}/%(title)s.%(ext)s',
                 'postprocessors': [{
                     'key': 'FFmpegExtractAudio',
@@ -27,7 +27,7 @@ class DownloadThread(QThread):
                 }],
                 'ffmpeg_location': 'ffmpeg'
             } if self.is_only_audio else {
-                'format': 'bestvideo[ext=m4a]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+                'format': 'bestvideo+bestaudio/best',
                 'outtmpl': f'{self.path}/%(title)s.%(ext)s',
                 'merge_output_format': 'mp4',
                 'ffmpeg_location': 'ffmpeg'
