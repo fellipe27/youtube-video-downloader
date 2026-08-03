@@ -53,6 +53,10 @@ python main.py
 4. Click **Download**.
 5. Wait until the download finishes.
 
+## 📦 Download
+You can download the latest version here:
+https://github.com/fellipe27/youtube-video-downloader/releases
+
 ## 🗂️ Project structure
 ```text
 youtube-video-downloader/
