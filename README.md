@@ -1,10 +1,10 @@
-# 🎥 YouTube Video Downloader
+# YouTube Video Downloader
 A simple desktop application built using PyQt5 and pytubefix to download YouTube videos or extract audio from YouTube links through an intuitive graphical interface.
 
-## 🎮 Preview
+## Preview
 ![Application](docs/preview.png)
 
-## 🚀 Features
+## Features
 * Download videos in the highest available resolution
 * Download audio only
 * Simple and intuitive desktop interface
@@ -13,14 +13,14 @@ A simple desktop application built using PyQt5 and pytubefix to download YouTube
 * Success and error notifications
 * Dark theme interface
 
-## 🛠️ Technologies
+## Technologies
 * **PyQt5** - Desktop GUI framework
 * **pytubefix** - YouTube downloading library
 
-## ⚙️ Requirements
+## Requirements
 * Python 3.10+ (recommended)
 
-## ▶️ Installation
+## Installation
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/fellipe27/youtube-video-downloader.git
@@ -39,12 +39,12 @@ source .venv/bin/activate   # Linux/Mac
 pip install -r requirements.txt
 ```
 
-## ▶️ Running the application
+## Running the application
 ```bash
 python main.py
 ```
 
-## 🖥️ Usage
+## Usage
 1. Paste a YouTube video URL.
 2. Choose the destination folder.
 3. Select one of the available formats:
@@ -53,20 +53,6 @@ python main.py
 4. Click **Download**.
 5. Wait until the download finishes.
 
-## 📦 Download
+## Download
 You can download the latest version here:
 https://github.com/fellipe27/youtube-video-downloader/releases
-
-## 🗂️ Project structure
-```text
-youtube-video-downloader/
-    - main.py               # Application entry point
-    - requirements.txt      # Project dependencies
-    - docs/                 # Application preview 
-```
-
-## 📄 License
-MIT
-
-## 👨‍💻 Author
-Developed by **[Paulo Fellipe](https://github.com/fellipe27)**
