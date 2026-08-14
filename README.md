@@ -45,13 +45,13 @@ python main.py
 ```
 
 ## Usage
-1. Paste a YouTube video URL.
-2. Choose the destination folder.
+1. Paste a YouTube video URL
+2. Choose the destination folder
 3. Select one of the available formats:
    * **Video**
    * **Only audio**
-4. Click **Download**.
-5. Wait until the download finishes.
+4. Click **Download**
+5. Wait until the download finishes
 
 ## Download
 You can download the latest version here:
